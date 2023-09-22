@@ -1,12 +1,24 @@
+import { useEffect, useState } from "react";
+import EachCategoryJob from "./EachCategoryJob/EachCategoryJob";
+
 const JobCategory = () => {
+  const [categories, setCategories] = useState([]);
+  useEffect(() => {
+    fetch("../../../../public/data/categories.json")
+      .then((res) => res.json())
+      .then((data) => setCategories(data));
+  }, []);
+
   return (
-    <div className="card w-96 bg-primary text-primary-content">
-      <div className="card-body">
-        <h2 className="card-title">Card title!</h2>
-        <p>If a dog chews shoes whose shoes does he choose?</p>
-        <div className="card-actions justify-end">
-          <button className="btn">Buy Now</button>
-        </div>
+    <div>
+      <h2>Featured Jobs List: {categories.length}</h2>
+      <div className="flex gap-4">
+        {categories.map((category) => (
+          <EachCategoryJob
+            key={category.id}
+            category={category}
+          ></EachCategoryJob>
+        ))}
       </div>
     </div>
   );
