@@ -12,7 +12,7 @@ const JobCategory = () => {
   return (
     <div>
       <h2>Featured Jobs List: {categories.length}</h2>
-      <div className="flex gap-4">
+      <div className="block lg:flex gap-4">
         {categories.map((category) => (
           <EachCategoryJob
             key={category.id}
