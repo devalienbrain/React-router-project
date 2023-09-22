@@ -4,11 +4,19 @@ import App from "./App.jsx";
 import "./index.css";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Banner from "./Components/Home/Banner/Banner.jsx";
+import NavBar from "./Components/Header/NavBar.jsx";
+import Footer from "./Components/Footer/Footer.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <div>Hello from react router!!</div>,
+    element: (
+      <>
+        {" "}
+        <NavBar></NavBar> <Banner></Banner> <Footer></Footer>{" "}
+      </>
+    ),
   },
 ]);
 
