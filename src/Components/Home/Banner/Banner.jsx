@@ -6,11 +6,13 @@ const Banner = () => {
       <div className="hero-content flex-col lg:flex-row-reverse">
         <img src={user} className="max-w-sm rounded-lg shadow-2xl" />
         <div>
-          <h1 className="text-5xl font-bold">Box Office News!</h1>
+          <h1 className="text-5xl font-bold">
+            One Step Closer To Your Dream Job
+          </h1>
           <p className="py-6">
-            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-            excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
-            a id nisi.
+            Explore thousands of job opportunities with all the information you
+            need. Its your future. Come find it. Manage all your job application
+            from start to finish.
           </p>
           <button className="btn btn-primary">Get Started</button>
         </div>
