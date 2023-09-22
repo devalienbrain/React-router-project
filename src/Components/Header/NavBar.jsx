@@ -1,4 +1,11 @@
+import { NavLink } from "react-router-dom";
+
 const NavBar = () => {
+  const MenuLinks = <>
+    <li><NavLink to="/jobDetails">Job Details</NavLink></li>
+    <li><NavLink to="/appliedJobs">Applied Jobs</NavLink></li>
+  </>
+
   return (
     <div className=" bg-base-100">
       <div className="navbar container mx-auto">
@@ -24,48 +31,14 @@ const NavBar = () => {
               tabIndex={0}
               className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
             >
-              <li>
-                <a>Statistics</a>
-              </li>
-              <li>
-                <a>Applied</a>
-                <ul className="p-2">
-                  <li>
-                    <a>Applied 1</a>
-                  </li>
-                  <li>
-                    <a>Applied 2</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a>Blog</a>
-              </li>
+              {MenuLinks}
             </ul>
           </div>
           <a className="btn btn-ghost normal-case text-xl">CareerHub</a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
-            <li>
-              <a>Statistics</a>
-            </li>
-            <li tabIndex={0}>
-              <details>
-                <summary>Applied</summary>
-                <ul className="p-2">
-                  <li>
-                    <a>Applied 1</a>
-                  </li>
-                  <li>
-                    <a>Applied 2</a>
-                  </li>
-                </ul>
-              </details>
-            </li>
-            <li>
-              <a>Blog</a>
-            </li>
+            {MenuLinks}
           </ul>
         </div>
         <div className="navbar-end">

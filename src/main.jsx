@@ -6,6 +6,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import Root from "./Components/Root/Root.jsx";
 import Home from "./Components/Home/Home";
+import JobCategory from "./Components/Home/JobCategory/JobCategory";
+import FeaturedJobs from "./Components/Home/FeaturedJobs/FeaturedJobs";
 
 const router = createBrowserRouter([
   {
@@ -15,6 +17,14 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>
+      },
+      {
+        path: "/jobDetails",
+        element: <JobCategory></JobCategory>
+      },
+      {
+        path: "/appliedJobs",
+        element: <FeaturedJobs></FeaturedJobs>
       },
     ],
   },
