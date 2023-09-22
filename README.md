@@ -36,3 +36,29 @@ Add @ .eslintrc.cjs file:
 env: { node: true },
 
 npm run dev
+
+👉 Create and render a browser router in "main.jsx" file:
+
+import {
+createBrowserRouter,
+RouterProvider,
+} from "react-router-dom";
+
+const router = createBrowserRouter([
+{
+path: "/",
+element: <div>Hello from react router!!</div>,
+},
+]);
+
+<RouterProvider router={router} />
+
+- To deploy in surge:
+
+npm run build
+surge
+
+Add "CNAME" file at "public" folder and paste the
+surge deploy link: jealous-army.surge.sh
+
+surge dist
